@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         var getUsersEmailId = intent.getStringExtra("The users id")
 
+
         var getUsersEmail = intent.getStringExtra("The users email")
 
         Log.i("MAIN_ACTIVITY", getUsersEmailId.toString())

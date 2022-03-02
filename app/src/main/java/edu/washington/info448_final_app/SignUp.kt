@@ -29,6 +29,9 @@ class SignUp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+
+
+
         var sign_up: Button = findViewById<Button>(R.id.sign_up)
         var email: EditText = findViewById<EditText>(R.id.EmailAddress)
         var password: EditText = findViewById<EditText>(R.id.Password)
