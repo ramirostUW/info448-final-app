@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "858923443617",
+    "project_id": "info448-groupproject",
+    "storage_bucket": "info448-groupproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858923443617:android:6607cd82bf1b90795dd7e0",
+        "android_client_info": {
+          "package_name": "edu.washington.info448_final_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858923443617-86167dumfq77ls85d9s20msegmbljjv7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWUTKUBNliIglpp0o4D5i9cnD7OCINUsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858923443617-86167dumfq77ls85d9s20msegmbljjv7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
