@@ -5,6 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -78,14 +79,21 @@ class SignUp : AppCompatActivity() {
 
                                 var toast =  Toast.makeText(this, "Login Succesful", Toast.LENGTH_LONG);
                                 toast.show()
-                                var intent = Intent(this, MainActivity::class.java)
+                                var intent = Intent(this, Login_Page::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+
+                                Log.i("SignUp", User.uid)
+
+                                Log.i("SignUp", User.email as String)
+
 
                                 intent.putExtra("The users id ", User.uid)
 
                                 intent.putExtra("The users email", User.email)
 
-                                finish()
+                                startActivity(intent)
+                                //finish()
                             }else{
                                 Toast.makeText(this, FireBaseuser.exception!!.message.toString(), Toast.LENGTH_LONG).show()
                             }
