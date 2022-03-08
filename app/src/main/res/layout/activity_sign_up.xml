@@ -9,7 +9,7 @@
 
 
 
-    <!-- <ImageView
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="224dp"
         android:layout_height="161dp"
@@ -17,7 +17,7 @@
         android:layout_y="165dp"
         app:srcCompat="@drawable/uw"
         tools:layout_editor_absoluteX="199dp"
-        tools:layout_editor_absoluteY="109dp" /> -->
+        tools:layout_editor_absoluteY="109dp" />
 
     <TextView
         android:id="@+id/textView"
