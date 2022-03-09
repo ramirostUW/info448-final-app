@@ -49,7 +49,6 @@ class FinalAppApplication: Application() {
             return "Invalid User";
         }
     }
-
     public fun getCurrentUserEmail () : String{
         if(isSignedIn())
         {
