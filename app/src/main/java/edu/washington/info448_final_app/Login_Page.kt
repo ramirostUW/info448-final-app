@@ -56,7 +56,7 @@ class Login_Page : AppCompatActivity() {
             }
 
             // to be modified
-            val nextIntent = Intent(this, ClassReview::class.java)
+            val nextIntent = Intent(this, Classes::class.java)
             val courses = applicationObj.repository.getCourses()
             nextIntent.putExtra("CLASS_CODE", courses[0].classCode)
             nextIntent.putExtra("CLASS_NAME", courses[0].className)
