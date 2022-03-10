@@ -3,6 +3,7 @@ package edu.washington.info448_final_app.repository
 import android.os.Build
 import android.os.StrictMode
 import android.util.Log
+import android.widget.Toast
 import com.google.gson.Gson
 import java.net.URL
 
@@ -49,6 +50,7 @@ object APIRepository: ReviewRepository {
                 "&numStars=" + java.net.URLEncoder.encode("" + numStars, "utf-8") +
                 "&description=" + java.net.URLEncoder.encode(description, "utf-8")
         val jsonString = URL(uploadAPIURL).readText()
+
     }
 
     override fun outputToLog(){
