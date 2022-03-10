@@ -1,5 +1,6 @@
 package edu.washington.info448_final_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +19,16 @@ class Classes : AppCompatActivity() {
             val newbtn = Button(this);
             newbtn.text = course.classCode
             val scrollView = findViewById<LinearLayout>(R.id.scrollViewLayout)
+
+            //button listener
+            newbtn.setOnClickListener {
+                val nextIntent = Intent(this, ClassReview::class.java)
+                nextIntent.putExtra("CLASS_CODE", course.classCode)
+                nextIntent.putExtra("CLASS_NAME", course.className)
+                nextIntent.putExtra("CLASS_DESCRIPTION", course.description)
+                nextIntent.putExtra("CLASS_PREREQS", course.prereqs)
+                startActivity(nextIntent)
+            }
             scrollView.addView(newbtn)
         }
 

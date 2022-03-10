@@ -55,14 +55,7 @@ class Login_Page : AppCompatActivity() {
                 startActivity(intent)
             }
 
-            // to be modified
             val nextIntent = Intent(this, Classes::class.java)
-            val courses = applicationObj.repository.getCourses()
-            nextIntent.putExtra("CLASS_CODE", courses[0].classCode)
-            nextIntent.putExtra("CLASS_NAME", courses[0].className)
-            nextIntent.putExtra("CLASS_DESCRIPTION", courses[0].description)
-            nextIntent.putExtra("CLASS_PREREQS", courses[0].prereqs)
-
             startActivity(nextIntent)
 
         }
