@@ -22,6 +22,7 @@ import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.ktx.Firebase
 
+
 class SignUp : AppCompatActivity() {
     private var usersEmail= "";
     private var usersPassword = "";
