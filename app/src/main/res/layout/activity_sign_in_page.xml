@@ -22,7 +22,8 @@
         android:layout_height="108dp"
         android:layout_x="51dp"
         android:layout_y="47dp"
-        android:text="Sign up for our app"
+        android:text="Sign in to our app"
+        android:textAlignment="center"
         android:textColor="@color/red"
         android:textSize="32dp" />
 
