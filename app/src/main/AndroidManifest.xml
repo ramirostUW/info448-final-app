@@ -17,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Info448finalapp">
         <activity
+            android:name=".Comments"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".PostReview"
             android:exported="false" />
         <activity
