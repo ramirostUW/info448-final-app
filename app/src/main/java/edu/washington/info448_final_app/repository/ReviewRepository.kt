@@ -7,5 +7,13 @@ interface ReviewRepository {
 
     fun postReview(valToUpload: CourseReview);
 
+    fun postComment(valToUpload: Comment);
+
+    fun getComments(courseID: String, author: String): List<Comment>
+
     fun outputToLog();
+
+    fun isStudent(email: String): Boolean;
+
+    fun setStudentStatus(email: String, status: String);
 }

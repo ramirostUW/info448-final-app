@@ -59,4 +59,8 @@ class FinalAppApplication: Application() {
             return "Invalid User";
         }
     }
+
+    public fun checkIfStudent (): Boolean {
+        return repository.isStudent(getCurrentUserEmail())
+    }
 }

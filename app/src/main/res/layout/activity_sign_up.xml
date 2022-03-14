@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
 
     tools:context=".SignUp">
+    
 
 
 
@@ -52,16 +53,25 @@
         android:minHeight="48dp"
         android:textColor="@color/red" />
 
+    <Switch
+        android:id="@+id/isStudentSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="55dp"
+        android:layout_y="549dp"
+        android:text="Sign up as student"
+        android:textSize="32dp" />
+
     <Button
         android:id="@+id/sign_up"
         android:layout_width="302dp"
         android:layout_height="58dp"
         android:layout_x="54dp"
-        android:layout_y="583dp"
+        android:layout_y="607dp"
         android:background="@color/yellow"
         android:text="Sign Up"
-        android:textColorHighlight="@color/green"
-        android:textColor="#D81B60" />
+        android:textColor="#D81B60"
+        android:textColorHighlight="@color/green" />
 </AbsoluteLayout>
 
 <!--    android:background="@color/red"-->

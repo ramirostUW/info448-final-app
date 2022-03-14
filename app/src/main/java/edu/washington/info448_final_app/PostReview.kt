@@ -3,6 +3,7 @@ package edu.washington.info448_final_app
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.*
 import edu.washington.info448_final_app.repository.Course
 import edu.washington.info448_final_app.repository.CourseReview
@@ -16,7 +17,7 @@ class PostReview : AppCompatActivity() {
         val app = this.application as FinalAppApplication
         val intent = getIntent()
         val rateClassCode = findViewById<TextView>(R.id.rateClassCode)
-        val numStars = findViewById<EditText>(R.id.numStars)
+        val numStars = findViewById<Spinner>(R.id.numStars)
         val description = findViewById<EditText>(R.id.description)
         val btnPostReview = findViewById<Button>(R.id.btnPostReview)
         val userEmail = app.getCurrentUserEmail()
@@ -25,9 +26,38 @@ class PostReview : AppCompatActivity() {
         //setText
         rateClassCode.text = "Rate " + classCode
 
-        //TODO: check errors (eg. star rating > 5 && star rating < 5)
+        //spinner
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.rating,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            numStars.adapter = adapter
+        }
+
+        var starChosen = 5
+        numStars.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                if (p0 != null) {
+
+                    starChosen = Integer.parseInt(p0.getItemAtPosition(p2).toString())
+                }
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+            }
+
+
+        }
+
+
+        //post button
         btnPostReview.setOnClickListener {
-            val numStarsInput = Integer.parseInt(numStars.text.toString())
+            val numStarsInput = starChosen
             val descriptionInput = description.text.toString()
             app.repository.postReview(CourseReview(classCode, userEmail, numStarsInput, descriptionInput))
             Toast.makeText(this, "Review Posted!", Toast.LENGTH_LONG).show()

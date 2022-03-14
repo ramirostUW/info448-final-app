@@ -5,20 +5,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import edu.washington.info448_final_app.repository.Comment
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var getUsersEmailId = intent.getStringExtra("The users id")
+        var getUsersEmailId = "ss" //intent.getStringExtra("The users id")
 
 
-        var getUsersEmail = intent.getStringExtra("The users email")
+        var getUsersEmail = "ss" //intent.getStringExtra("The users email")
 
         Log.i("MAIN_ACTIVITY", getUsersEmailId.toString())
 
         Log.i("MAIN_ACTIVITY", getUsersEmail.toString())
+
+        val repo = (this.application as FinalAppApplication).repository
+        repo.setStudentStatus("ramirost@uw.edu", "student")
+        val testVal = repo.isStudent("ramirost@live.com")
+
+        Log.i("MAIN_ACTIVITY", "" + testVal)
 
     }
 }

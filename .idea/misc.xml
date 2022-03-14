@@ -11,12 +11,16 @@
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.124" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_class_review.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_classes.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_comments.xml" value="0.25" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_login_page.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_main.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_sign_in_page.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_sign_up.xml" value="0.11302083333333333" />
         <entry key="app/src/main/res/layout/activity_class_review.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_classes.xml" value="0.14903595622720167" />
+        <entry key="app/src/main/res/layout/activity_comments.xml" value="0.1640625" />
+        <entry key="app/src/main/res/layout/activity_post_review.xml" value="0.1640625" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.24003623188405798" />
       </map>
     </option>
   </component>

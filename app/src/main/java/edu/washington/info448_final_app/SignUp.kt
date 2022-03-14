@@ -8,6 +8,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Switch
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
@@ -21,6 +22,7 @@ import com.google.firebase.FirebaseError
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.ktx.Firebase
+
 
 class SignUp : AppCompatActivity() {
     private var usersEmail= "";
@@ -77,7 +79,7 @@ class SignUp : AppCompatActivity() {
 
                                 createUser.append(User.toString())
 
-                                var toast =  Toast.makeText(this, "Login Succesful", Toast.LENGTH_LONG);
+                                var toast =  Toast.makeText(this, "Account created!", Toast.LENGTH_LONG);
                                 toast.show()
                                 var intent = Intent(this, Login_Page::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -86,6 +88,15 @@ class SignUp : AppCompatActivity() {
                                 Log.i("SignUp", User.uid)
 
                                 Log.i("SignUp", User.email as String)
+
+                                val isStudentSwitch = findViewById<Switch>(R.id.isStudentSwitch)
+
+                                val studentStatus = isStudentSwitch.isChecked
+
+                                if(studentStatus)
+                                    (this.application as FinalAppApplication).repository.setStudentStatus(usersEmail, "student")
+                                else
+                                    (this.application as FinalAppApplication).repository.setStudentStatus(usersEmail, "nonstudent")
 
 
                                 intent.putExtra("The users id ", User.uid)
