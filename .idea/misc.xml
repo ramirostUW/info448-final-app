@@ -9,18 +9,18 @@
         <entry key="..\:/Users/abdiw/Downloads/info448-final-app/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.124" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.124" />
+        <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_class_review.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_classes.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_comments.xml" value="0.25" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_login_page.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_main.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_sign_in_page.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/ramir/AndroidStudioProjects/info448finalapp/app/src/main/res/layout/activity_sign_up.xml" value="0.11302083333333333" />
-        <entry key="..\:/uw/INFO 448/info448-final-app/app/src/main/res/layout/activity_class_review.xml" value="0.2957427536231884" />
-        <entry key="..\:/uw/INFO 448/info448-final-app/app/src/main/res/layout/activity_classes.xml" value="0.37135416666666665" />
-        <entry key="..\:/uw/INFO 448/info448-final-app/app/src/main/res/layout/activity_comment.xml" value="0.37135416666666665" />
-        <entry key="..\:/uw/INFO 448/info448-final-app/app/src/main/res/layout/activity_comments.xml" value="0.2046875" />
-        <entry key="..\:/uw/INFO 448/info448-final-app/app/src/main/res/layout/activity_login_page.xml" value="0.25" />
-        <entry key="..\:/uw/INFO 448/info448-final-app/app/src/main/res/layout/activity_post_comment.xml" value="0.37135416666666665" />
-        <entry key="..\:/uw/INFO 448/info448-final-app/app/src/main/res/layout/activity_post_review.xml" value="0.2957427536231884" />
-        <entry key="..\:/uw/INFO 448/info448-final-app/app/src/main/res/layout/activity_sign_in_page.xml" value="0.2957427536231884" />
+        <entry key="app/src/main/res/layout/activity_class_review.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_classes.xml" value="0.14903595622720167" />
+        <entry key="app/src/main/res/layout/activity_comments.xml" value="0.1640625" />
+        <entry key="app/src/main/res/layout/activity_post_review.xml" value="0.1640625" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.24003623188405798" />
       </map>
     </option>
   </component>

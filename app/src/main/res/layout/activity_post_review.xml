@@ -43,17 +43,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Star Rating (out of 5) :"
+                    android:text="Star Rating (out of 5):"
                     android:textStyle="bold"
                     android:textSize="15dp" />
 
-            <EditText
-                    android:id="@+id/numStars"
-                    android:layout_width="100dp"
-                    android:layout_height="20dp"
-                    android:layout_margin="20dp"
-                    android:inputType="number" />
 
+            <Spinner
+                android:id="@+id/numStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
 
 
             <TextView
@@ -70,6 +69,7 @@
                 android:layout_height="200dp"
                 android:layout_margin="20dp"
                 android:inputType="text"
+                android:backgroundTint="@color/black"
                 />
 
             <Button

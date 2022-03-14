@@ -85,7 +85,7 @@
             </ScrollView>
 
             <Button
-                android:id="@+id/btnPostReviewPage"
+                android:id="@+id/btnPostComment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Leave Comment"

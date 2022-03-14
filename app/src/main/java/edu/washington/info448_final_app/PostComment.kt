@@ -34,7 +34,7 @@ class PostComment : AppCompatActivity() {
         btnPostComment.setOnClickListener {
             val descriptionInput = description.text.toString()
             app.repository.postComment(Comment(classCode, reviewAuthor!!, userEmail, descriptionInput))
-            Toast.makeText(this, "Review Posted!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Comment Posted!", Toast.LENGTH_LONG).show()
             finish()
         }
     }

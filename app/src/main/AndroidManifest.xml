@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Info448finalapp">
+        android:theme="@style/Theme.Info448finalapp.NoActionBar">
         <activity
             android:name=".PostComment"
             android:exported="false" />
