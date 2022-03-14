@@ -15,8 +15,10 @@ class Comments : AppCompatActivity() {
         //reference
         val intent = getIntent()
         val app = this.application as FinalAppApplication
-        val classCode = intent.getStringExtra("CLASS_CODE")!! //"INFO 448"
-        val author = intent.getStringExtra("author")!!//"ramirost@live.com"
+        val classCode = intent.getStringExtra("CLASS_CODE")!!
+        //"INFO 448"
+        val author = intent.getStringExtra("author")!!
+            //"ramirost@live.com"
         val reviewDescription = intent.getStringExtra("REVIEW_DESCRIPTION")!!
             //"Application development for Android devices. Covers implementation of ...\"\n"
         val classCodeAndNameText = findViewById<TextView>(R.id.classCodeAndName)

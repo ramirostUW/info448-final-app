@@ -59,13 +59,11 @@ class Classes : AppCompatActivity() {
     }
 
     fun getsortedCourses(order: String) : List<Course> {
-        val courses = app.repository.getCourses()
-        Toast.makeText(this, "hello", Toast.LENGTH_LONG).show()
-        Log.i("hello", order)
+        var courses = app.repository.getCourses()
         when(order){
             "Rating" -> {
                 Log.i("debug", "order is $order")
-                courses.sortedBy { it.numCredits.toInt() }
+                courses = courses.sortedBy { it.avgStars*-1 }
             }
         }
         return courses
