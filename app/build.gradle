@@ -7,11 +7,11 @@ plugins {
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.android.application'
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "edu.washington.info448_final_app"
-        minSdk 27
+        minSdk 25
         targetSdk 32
         versionCode 1
         versionName "1.0"

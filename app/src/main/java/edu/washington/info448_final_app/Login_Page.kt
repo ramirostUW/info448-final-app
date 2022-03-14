@@ -46,6 +46,10 @@ class Login_Page : AppCompatActivity() {
         Log.i("MAIN_ACTIVITY", "currentUserID: " + applicationObj.getCurrentUserEmail())
 
         if(applicationObj.isSignedIn()){
+            Log.i("MAIN_ACTIVITY", "" + applicationObj.isSignedIn())
+            Log.i("MAIN_ACTIVITY", "currentUserID: " + applicationObj.getCurrentUID())
+            Log.i("MAIN_ACTIVITY", "currentUserID: " + applicationObj.getCurrentUserEmail())
+
             signIn.isVisible = false;
             signUp.setText("Log Out")
 
