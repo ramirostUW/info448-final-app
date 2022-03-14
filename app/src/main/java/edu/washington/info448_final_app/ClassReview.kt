@@ -41,6 +41,15 @@ class ClassReview : AppCompatActivity() {
                 val newBtn = Button(this)
                 newBtn.text =
                     review.numStars.toString() + " / 5 : " + review.description + " - " + review.author
+
+                newBtn.setOnClickListener {
+                    val intent = Intent(this, Comment::class.java)
+                    intent.putExtra("Rating", review.numStars)
+                    intent.putExtra("Review", review.description)
+                    intent.putExtra("Author", review.author)
+                    startActivity(intent)
+                }
+
                 reviewScrollView.addView(newBtn)
             }
         }
