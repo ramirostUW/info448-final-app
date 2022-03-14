@@ -7,5 +7,9 @@ interface ReviewRepository {
 
     fun postReview(valToUpload: CourseReview);
 
+    fun postComment(valToUpload: Comment);
+
+    fun getComments(courseID: String, author: String): List<Comment>
+
     fun outputToLog();
 }

@@ -64,7 +64,7 @@ class Sign_In_Page : AppCompatActivity() {
 
                 else -> {
                     var toast =
-                        Toast.makeText(this, "Trying to sign up!", Toast.LENGTH_LONG);
+                        Toast.makeText(this, "Trying to sign in!", Toast.LENGTH_LONG);
                     toast.show()
 
                     val enteredEmail = emailInput.text.toString();
