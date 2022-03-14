@@ -3,6 +3,7 @@ package edu.washington.info448_final_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.StrictMode
 import android.view.View
 import android.widget.*
 import edu.washington.info448_final_app.repository.CourseReview
@@ -15,7 +16,9 @@ class Comments : AppCompatActivity() {
     override fun onStart(){
         super.onStart()
         setContentView(R.layout.activity_comments)
-
+        val gfgPolicy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(gfgPolicy)
         //reference
         val intent = getIntent()
         val app = this.application as FinalAppApplication

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.StrictMode
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Button
@@ -32,7 +33,9 @@ class SignUp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-
+        val gfgPolicy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(gfgPolicy)
 
 
         var sign_up: Button = findViewById<Button>(R.id.sign_up)

@@ -3,6 +3,7 @@ package edu.washington.info448_final_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.StrictMode
 import android.util.Log
 import android.widget.Button
 import androidx.core.view.isVisible
@@ -11,6 +12,9 @@ import com.google.firebase.auth.FirebaseAuth
 
 class Login_Page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val gfgPolicy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(gfgPolicy)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_page)
 

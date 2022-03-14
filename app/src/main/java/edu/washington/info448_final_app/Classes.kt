@@ -3,6 +3,7 @@ package edu.washington.info448_final_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.StrictMode
 import android.util.Log
 import android.view.View
 import android.widget.*
@@ -16,10 +17,14 @@ class Classes : AppCompatActivity() {
     private lateinit var app: FinalAppApplication
     private var order = ""
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_classes)
-
+        val gfgPolicy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(gfgPolicy)
         app = this.application as FinalAppApplication
 
         scrollView = findViewById<LinearLayout>(R.id.scrollViewLayout)

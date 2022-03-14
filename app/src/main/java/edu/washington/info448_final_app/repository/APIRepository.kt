@@ -10,10 +10,11 @@ import java.net.URL
 object APIRepository: ReviewRepository {
     init {
 
-        if (Build.VERSION.SDK_INT > 9) {
+       // if (Build.VERSION.SDK_INT > 9) {
             val gfgPolicy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(gfgPolicy)
-        }
+     //   }
     }
     private val gson = Gson()
     private val apiURL = "https://boiling-ocean-79185.herokuapp.com"

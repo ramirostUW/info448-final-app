@@ -3,6 +3,7 @@ package edu.washington.info448_final_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.StrictMode
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Button
@@ -28,7 +29,9 @@ class Sign_In_Page : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in_page)
 
-
+        val gfgPolicy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(gfgPolicy)
         var emailInput = findViewById<EditText>(R.id.EmailAddress)
 
         var password = findViewById<EditText>(R.id.Password)
