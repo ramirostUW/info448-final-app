@@ -3,6 +3,7 @@ package edu.washington.info448_final_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import edu.washington.info448_final_app.repository.CourseReview
 import org.w3c.dom.Text
@@ -11,6 +12,7 @@ class ClassReview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_class_review)
+
 
         //reference
         val intent = getIntent()
@@ -25,6 +27,13 @@ class ClassReview : AppCompatActivity() {
         val btnPostReviewPage = findViewById<Button>(R.id.btnPostReviewPage)
         val reviewScrollView = findViewById<LinearLayout>(R.id.reviewScrollViewLayout)
         val reviews = app.repository.getReviews(classCode)
+
+
+        val rateBtn = findViewById<Button>(R.id.btnPostReviewPage)
+        if(!app.checkIfStudent())
+        {
+            rateBtn.visibility = View.INVISIBLE
+        }
 
         //setText
         classCodeAndNameText.text = classCode + " | " + className

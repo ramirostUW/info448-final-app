@@ -47,7 +47,12 @@ class Login_Page : AppCompatActivity() {
         Log.i("MAIN_ACTIVITY", "currentUserID: " + applicationObj.getCurrentUserEmail())
 
         if(applicationObj.isSignedIn()){
-            signIn.isVisible = false;
+            signIn.setText("Browse Classes");
+            signIn.setOnClickListener {
+                val nextIntent = Intent(this, Classes::class.java)
+                startActivity(nextIntent)
+            }
+
             signUp.setText("Log Out")
 
             signUp.setOnClickListener {
@@ -55,9 +60,6 @@ class Login_Page : AppCompatActivity() {
                 var intent = Intent(this, Login_Page::class.java)
                 startActivity(intent)
             }
-
-            val nextIntent = Intent(this, Classes::class.java)
-            startActivity(nextIntent)
 
         }
 

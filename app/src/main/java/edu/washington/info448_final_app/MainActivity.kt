@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         Log.i("MAIN_ACTIVITY", getUsersEmail.toString())
 
         val repo = (this.application as FinalAppApplication).repository
-
-        val testVal = repo.getComments("INFO 448","ramirost@live.com")
+        repo.setStudentStatus("ramirost@uw.edu", "student")
+        val testVal = repo.isStudent("ramirost@live.com")
 
         Log.i("MAIN_ACTIVITY", "" + testVal)
 
