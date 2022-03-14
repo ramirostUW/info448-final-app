@@ -47,8 +47,10 @@ class Comments : AppCompatActivity() {
         }
 
         btnPostReviewPage.setOnClickListener {
-            val nextIntent = Intent(this, PostReview::class.java)
+            val nextIntent = Intent(this, PostComment::class.java)
             nextIntent.putExtra("CLASS_CODE", classCode)
+            nextIntent.putExtra("REVIEW_AUTHOR", author)
+            nextIntent.putExtra("REVIEW_DESCRIPTION", reviewDescription)
             startActivity(nextIntent)
         }
     }

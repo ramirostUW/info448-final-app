@@ -52,10 +52,10 @@ class ClassReview : AppCompatActivity() {
                     review.numStars.toString() + " / 5 : " + review.description + " - " + review.author
 
                 newBtn.setOnClickListener {
-                    val intent = Intent(this, Comment::class.java)
-                    intent.putExtra("Rating", review.numStars)
-                    intent.putExtra("Review", review.description)
-                    intent.putExtra("Author", review.author)
+                    val intent = Intent(this, Comments::class.java)
+                    intent.putExtra("CLASS_CODE", classCode)
+                    intent.putExtra("author", review.author)
+                    intent.putExtra("REVIEW_DESCRIPTION", review.description)
                     startActivity(intent)
                 }
 
