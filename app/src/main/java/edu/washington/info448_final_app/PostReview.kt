@@ -8,7 +8,10 @@ import android.view.View
 import android.widget.*
 import edu.washington.info448_final_app.repository.Course
 import edu.washington.info448_final_app.repository.CourseReview
-
+import java.util.*
+@SuppressWarnings("error")
+@JvmSuppressWildcards
+@Strictfp
 class PostReview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,9 +30,10 @@ class PostReview : AppCompatActivity() {
         val userEmail = app.getCurrentUserEmail()
         val classCode = intent.getStringExtra("CLASS_CODE")!!
 
+
         //setText
         rateClassCode.text = "Rate " + classCode
-
+        System.getProperty(rateClassCode.text.toString(), app.getCurrentUserEmail())
         //spinner
         ArrayAdapter.createFromResource(
             this,

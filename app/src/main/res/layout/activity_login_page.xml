@@ -7,6 +7,7 @@
     android:background="@color/purple_200"
     tools:context=".Login_Page">
 
+
     <Button
         android:id="@+id/sign_up"
         android:layout_width="302dp"

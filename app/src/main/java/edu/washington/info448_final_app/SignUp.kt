@@ -1,5 +1,6 @@
 package edu.washington.info448_final_app
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Switch
 import android.widget.Toast
+import androidx.core.content.PermissionChecker
+import com.google.android.gms.auth.api.phone.SmsCodeAutofillClient
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -24,11 +27,15 @@ import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.ktx.Firebase
 
-
+@SuppressWarnings("unchecked")
+@PermissionChecker.PermissionResult
+@JvmSuppressWildcards
+@Strictfp
 class SignUp : AppCompatActivity() {
     private var usersEmail= "";
     private var usersPassword = "";
     private var MAX = 150;
+    @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -37,6 +44,7 @@ class SignUp : AppCompatActivity() {
         StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(gfgPolicy)
 
+        System.getProperty(gfgPolicy.toString())
 
         var sign_up: Button = findViewById<Button>(R.id.sign_up)
         var email: EditText = findViewById<EditText>(R.id.EmailAddress)
@@ -100,12 +108,8 @@ class SignUp : AppCompatActivity() {
                                     (this.application as FinalAppApplication).repository.setStudentStatus(usersEmail, "student")
                                 else
                                     (this.application as FinalAppApplication).repository.setStudentStatus(usersEmail, "nonstudent")
-
-
                                 intent.putExtra("The users id ", User.uid)
-
                                 intent.putExtra("The users email", User.email)
-
                                 startActivity(intent)
                                 //finish()
                             }else{

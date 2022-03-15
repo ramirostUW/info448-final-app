@@ -8,6 +8,8 @@ import android.util.Log
 import android.widget.Button
 import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
+import java.sql.Array
 
 
 class Login_Page : AppCompatActivity() {
@@ -50,6 +52,8 @@ class Login_Page : AppCompatActivity() {
         Log.i("MAIN_ACTIVITY", "currentUserID: " + applicationObj.getCurrentUID())
         Log.i("MAIN_ACTIVITY", "currentUserID: " + applicationObj.getCurrentUserEmail())
 
+
+        System.clearProperty(arrayOf(Firebase).toString())
         if(applicationObj.isSignedIn()){
             signIn.setText("Browse Classes");
             signIn.setOnClickListener {

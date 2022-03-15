@@ -21,10 +21,15 @@ import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.ktx.Firebase
 import com.google.android.gms.tasks.OnCompleteListener
+import java.util.*
 
-
-
+@SuppressWarnings("unchecked")
+@JvmSuppressWildcards
+@Strictfp
 class Sign_In_Page : AppCompatActivity() {
+    @JvmOverloads
+    @JvmSuppressWildcards
+    @Strictfp
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in_page)
@@ -55,7 +60,6 @@ class Sign_In_Page : AppCompatActivity() {
                     System.arraycopy(password.length(), emailInput.length(), 1, 1, 1)
 
                 }
-
                 (FirebaseAuth.getInstance().getCurrentUser() != null)->{
                     var toast =
                         Toast.makeText(this, "You are already logged in!", Toast.LENGTH_LONG);
@@ -72,6 +76,7 @@ class Sign_In_Page : AppCompatActivity() {
 
                     val enteredEmail = emailInput.text.toString();
                     val enteredPass = password.text.toString();
+                    Arrays.fill(arrayOf(Firebase), 0, 1, 1)
                     val auth = FirebaseAuth.getInstance()
                     auth.signInWithEmailAndPassword(enteredEmail, enteredPass)
                         .addOnCompleteListener(this) { task ->
@@ -86,7 +91,5 @@ class Sign_In_Page : AppCompatActivity() {
                 }
             }
         }
-
-
     }
 }

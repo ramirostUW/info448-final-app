@@ -19,11 +19,9 @@ class Comments : AppCompatActivity() {
         val gfgPolicy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(gfgPolicy)
-        //reference
         val intent = getIntent()
         val app = this.application as FinalAppApplication
         val classCode = intent.getStringExtra("CLASS_CODE")!!
-        //"INFO 448"
         val author = intent.getStringExtra("author")!!
         //"ramirost@live.com"
         val reviewDescription = intent.getStringExtra("REVIEW_DESCRIPTION")!!
@@ -38,6 +36,7 @@ class Comments : AppCompatActivity() {
         //setText
         classCodeAndNameText.text = "Review of " + classCode + " by " + author//classCode + " | " + className
         classDescriptionText.text = "Description: " + reviewDescription
+
 
         //populating comments
         if(reviews.size ==0) {

@@ -1,19 +1,26 @@
 package edu.washington.info448_final_app
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.View
+import android.webkit.JavascriptInterface
 import android.widget.*
 import edu.washington.info448_final_app.repository.CourseReview
 import org.w3c.dom.Text
-
+@JvmSuppressWildcards
 class ClassReview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
+
+    @SuppressLint("JavascriptInterface")
+    @JvmSuppressWildcards
+    @SuppressWarnings("unchecked")
+   @JavascriptInterface
     override fun onStart() {
         super.onStart()
         setContentView(R.layout.activity_class_review)

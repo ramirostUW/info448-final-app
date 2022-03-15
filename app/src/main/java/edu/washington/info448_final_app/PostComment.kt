@@ -9,7 +9,9 @@ import android.widget.*
 import edu.washington.info448_final_app.repository.Comment
 import edu.washington.info448_final_app.repository.Course
 import edu.washington.info448_final_app.repository.CourseReview
-
+@SuppressWarnings("error")
+@JvmSuppressWildcards
+@Strictfp
 class PostComment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +20,8 @@ class PostComment : AppCompatActivity() {
         StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(gfgPolicy)
 
-        //reference
+        System.runFinalization()
+
         val app = this.application as FinalAppApplication
         val intent = getIntent()
         val rateClassCode = findViewById<TextView>(R.id.rateClassCode)

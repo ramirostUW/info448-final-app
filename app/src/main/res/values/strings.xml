@@ -6,10 +6,8 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
     <string name="comment_rating_label">Rating: %1$s/5</string>
     <string name="comment_author_label">Author: %1$s</string>
     <string name="class_sort_label">Sort by:</string>

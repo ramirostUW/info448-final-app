@@ -8,7 +8,8 @@ import android.util.Log
 import android.widget.Button
 import edu.washington.info448_final_app.repository.Comment
 
-
+@JvmSuppressWildcards
+@SuppressWarnings("unknown")
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,10 +18,7 @@ class MainActivity : AppCompatActivity() {
         StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(gfgPolicy)
         var getUsersEmailId = "ss" //intent.getStringExtra("The users id")
-
-
         var getUsersEmail = "ss" //intent.getStringExtra("The users email")
-
         Log.i("MAIN_ACTIVITY", getUsersEmailId.toString())
 
         Log.i("MAIN_ACTIVITY", getUsersEmail.toString())

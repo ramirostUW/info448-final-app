@@ -24,7 +24,11 @@ import com.google.firebase.FirebaseError
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.ktx.Firebase
+import kotlin.experimental.ExperimentalTypeInference
 
+@SuppressWarnings("error")
+@JvmSuppressWildcards
+@Strictfp
 class FinalAppApplication: Application() {
 
     val repository: ReviewRepository = APIRepository
@@ -36,9 +40,11 @@ class FinalAppApplication: Application() {
         repository.outputToLog()
     }
 
+    @JvmOverloads
     public fun isSignedIn() : Boolean {
         return (FirebaseAuth.getInstance().getCurrentUser() != null)
     }
+    @JvmOverloads
     public fun getCurrentUID () : String{
         if(isSignedIn())
         {
@@ -49,6 +55,10 @@ class FinalAppApplication: Application() {
             return "Invalid User";
         }
     }
+    @OptIn(ExperimentalTypeInference::class)
+    @JvmOverloads
+    @SuppressWarnings("unknown")
+    @BuilderInference
     public fun getCurrentUserEmail () : String{
         if(isSignedIn())
         {
@@ -60,6 +70,8 @@ class FinalAppApplication: Application() {
         }
     }
 
+    @JvmOverloads
+    @SuppressWarnings("unknown")
     public fun checkIfStudent (): Boolean {
         return repository.isStudent(getCurrentUserEmail())
     }
